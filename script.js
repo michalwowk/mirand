@@ -1,11 +1,11 @@
-const vhUnit = () => {
+var vhUnit = () => {
   document.documentElement.style.setProperty(
     "--vh",
     `${window.innerHeight * 0.01}px`
   );
 };
 
-export const vhUnitInit = () => {
+var vhUnitInit = () => {
   vhUnit();
 
   window.addEventListener("orientationchange", (e) => {
