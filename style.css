@@ -355,103 +355,232 @@ img {
     height: auto;
 }
 
-.main-element {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    overflow-x: hidden;
-    position: relative;
-    color: #1e1a20;
-    letter-spacing: .4px;
+body {
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.4;
 }
 
 a {
     color: #1e1a20;
+    text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: #ac2421;
+    color: #c12122;
 }
-
-.content {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.video {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-
-.logo-image {
-    max-width: 300px;
-    margin-bottom: 32px;
-    margin-right: 100px;
-}
- 
-.address {
-    line-height: 2;
-    font-style: normal;
-}
-
 video {
-    z-index: 1;
     pointer-events: none;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100vh;
 }
 
 .overlay {
     position: absolute;
-    z-index: 2;
     width: 100%;
     left: 0;
     top: 0;
     height: 100%;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: rgb(255, 255, 255, 0.45);
 }
 
-@media only screen and (max-width: 992px) {
-    .main-element {
-        padding: 0 15px;
-        font-size: 18px;
-        text-align: center;
+.main {
+    position: relative;
+    color: #1e1a20;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1 0 0;
+}
+
+.footer {
+    flex: 0 0 auto;
+    background-color: #fff;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 10px;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main {
+    padding-top: 80px;
+}
+
+.heading {
+    margin-top: 0;
+    font-weight: 800;
+    position: relative;
+    line-height: 1;
+    font-size: 36px;
+    font-size: clamp(20px, 3vw, 36px);
+
+    text-shadow: 1px 1px 0 rgb(77, 75, 75);
+    font-style: italic;
+}
+
+.heading > span {
+    display: block;
+}
+
+sup {
+    font-size: 50%;
+    top: -0.7em;
+    text-shadow: none;
+}
+
+.highlight {
+    color: #c12122;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col--left {
+    /* flex: 0 0 30%;
+    max-width: 30%; */
+}
+
+.logo {
+    max-width: 200px;
+    margin-right: 100px;
+}
+
+.company-motto {
+    font-size: 0.755em;
+}
+
+.col--right {
+    /* flex: 0 0 66%;
+    max-width: 66%; */
+}
+
+.main-content {
+    max-width: 750px;
+}
+
+.bar {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #c12122;
+    color: #fff;
+    font-size: 10px;
+}
+
+address {
+    display: flex;
+    font-style: normal;
+    flex-direction: column;
+}
+
+.info-group {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.info-text {
+    display: inline-block;
+    min-width: 75px;
+}
+
+
+.animated {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-4 {
+    animation-delay: 0.4s;
+}
+
+.animation-delay-6 {
+    animation-delay: 0.6s;
+}
+
+.animation-delay-8 {
+    animation-delay: 0.8s;
+}
+
+.animation-delay-10 {
+    animation-delay: 1s;
+}
+
+.animation-delay-12 {
+    animation-delay: 1.2s;
+}
+
+.animation-day-14 {
+    animation-delay: 1.4s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
 
-    .logo-image {
-        max-width: 200px;
-        margin-right: 50px;
+    to {
+        opacity: 1;
+        transform: translate(0);
     }
-  }
+}
 
+.contact-text {
+    font-weight: 800;
+    margin-bottom: 4px;
+}
 
+.grill-images-wrapper img {
+    max-width: 670px;
+    margin-top: 50px;
+}
 
-@media only screen and (max-width: 767px) {
-    .main-element {
-        padding: 0 15px;
-        font-size: 16px;
-        text-align: center;
-
-    }
-
-    .content {
-        position: relative;
-        z-index: 3;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .logo-image {
-        max-width: 200px;
-        margin-right: 0;
-        margin-bottom: 32px;
-    }
-  }
+.grill-images-wrapper {
+    display: flex;
+    justify-content: center;
+}
