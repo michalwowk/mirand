@@ -410,6 +410,7 @@ body {
     width: 100%;
     overflow: hidden;
     font-weight: 600;
+    font-size: 20px;
 }
 
 .page-wrapper {
@@ -441,7 +442,7 @@ body {
 }
 
 .main {
-    padding-top: 80px;
+    padding-top: 25vh;
 }
 
 .heading {
@@ -449,8 +450,8 @@ body {
     font-weight: 800;
     position: relative;
     line-height: 1;
-    font-size: 36px;
-    font-size: clamp(20px, 3vw, 36px);
+    font-size: 52px;
+    font-size: clamp(20px, 3vw, 52px);
 
     text-shadow: 1px 1px 0 rgb(77, 75, 75);
     font-style: italic;
@@ -496,7 +497,7 @@ sup {
 }
 
 .main-content {
-    max-width: 750px;
+    max-width: 600px;
 }
 
 .bar {
@@ -522,6 +523,60 @@ address {
 .info-text {
     display: inline-block;
     min-width: 75px;
+}
+
+.contact-text {
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.grill-images-wrapper img {
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.grill-images-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grill-images-wrapper {
+        display: none;
+    }
+
+    .logo {
+        margin: 0 auto;
+        max-width: 160px;
+    }
+
+    .col {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-content {
+        padding-bottom: 50px;
+    }
+
+    .info-group {
+        margin: 0 auto;
+        text-align: r;
+    }
+
+    .main {
+        padding-top: 80px;
+    }
+
+    body {
+        font-size: 16px;
+    }
 }
 
 
@@ -570,51 +625,5 @@ address {
     to {
         opacity: 1;
         transform: translate(0);
-    }
-}
-
-.contact-text {
-    font-weight: 800;
-    margin-bottom: 4px;
-}
-
-.grill-images-wrapper img {
-    max-width: 670px;
-    margin-top: 50px;
-}
-
-.grill-images-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-@media only screen and (max-width: 767px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .grill-images-wrapper {
-        display: none;
-    }
-
-    .logo {
-        margin: 0 auto;
-        max-width: 160px;
-    }
-
-    .col {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .main-content {
-        padding-bottom: 50px;
-    }
-
-    .info-group {
-        margin: 0 auto;
-        text-align: r;
     }
 }
