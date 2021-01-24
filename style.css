@@ -387,6 +387,7 @@ video {
     transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .overlay {
@@ -405,6 +406,7 @@ video {
 
 body {
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     overflow: hidden;
     font-weight: 600;
@@ -415,6 +417,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .main {
