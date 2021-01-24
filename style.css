@@ -609,4 +609,9 @@ address {
     .main-content {
         padding-bottom: 50px;
     }
+
+    .info-group {
+        margin: 0 auto;
+        text-align: r;
+    }
 }
